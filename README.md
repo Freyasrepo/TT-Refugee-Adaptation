@@ -12,6 +12,36 @@ This project investigates how **TikTok users migrate to Xiaohongshu** and adapt 
 - What **themes dominate user discussions**, and how do they correlate with retention?
 - Are there **anomalies** such as **bot activity** or **hyper-engaged influencers**?
 
+## **Dataset Description**
+
+The dataset used in this project consists of **3,000 user posts** collected from Xiaohongshu between **January and February 2025**. The data includes a diverse set of users who previously engaged on TikTok and have migrated to Xiaohongshu. The dataset captures multiple aspects of user engagement and content adaptation:
+
+- **Behavioral Features:**
+  - Number of collects (saves by users)
+  - Number of comments
+  - Number of shares
+  - Number of likes
+
+- **Temporal Features:**
+  - Post creation timestamps
+  - Posting frequency (daily/weekly activity)
+  - Time-of-day engagement patterns
+
+- **Text Features:**
+  - Title and content of user posts
+  - Keyword extraction via **TF-IDF** for topic analysis
+
+- **Categorical Features:**
+  - Post type (video/image-based content)
+  - User engagement levels (active vs. passive users)
+
+Data preprocessing steps include:
+- **Text Cleaning:** Removing special characters, processing mixed-language content (Chinese and English), and normalizing text data.
+- **Handling Missing Values:** Filling gaps in behavioral and categorical attributes.
+- **Numeric Standardization:** Converting engagement metrics (such as '1万+' notation) into consistent numerical values.
+
+This dataset serves as the foundation for the analysis of **TikTok refugees' adaptation behaviors** and is critical for the modeling and visualization steps in this study.
+
 ## **Methodology**
 
 We apply **unsupervised learning models** to analyze user migration and adaptation strategies:
@@ -86,10 +116,8 @@ For any inquiries, please contact jiwu3340\@Colorado.edu.
 
 ## **License**
 
-This project is licensed under the CC **BY-NC 4.0  License**.\
+This project is licensed under the **CC BY-NC 4.0  License**.
 
 
 ---
-
-This README provides a **comprehensive overview** of your project, making it easy for others to **understand, install, and use** your code. Let me know if you need any modifications! 🚀
 
