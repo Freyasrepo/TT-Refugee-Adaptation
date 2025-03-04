@@ -70,16 +70,3 @@ This project investigates the **migration behavior of TikTok users to Xiaohongsh
    git clone https://github.com/yourusername/tiktok-refugee-adaptation.git
    cd tiktok-refugee-adaptation
 
-### **Key Features of this README:**
-Creative Commons Attribution-NonCommercial 4.0 International
-
-You are free to:
-- Share: Copy and redistribute the material in any medium or format.
-- Adapt: Remix, transform, and build upon the material.
-
-Under the following terms:
-- Attribution: You must give appropriate credit and provide a link to the license.
-- NonCommercial: You may not use the material for commercial purposes.
-
-See full license at: https://creativecommons.org/licenses/by-nc/4.0/
-
