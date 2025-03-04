@@ -1,72 +1,95 @@
-# **TikTok Refugee Migration and Adaptation Analysis on Xiaohongshu**
+# **TikTok Refugee Migration and Adaptation on Xiaohongshu**
 
 ## **Project Overview**
-This project investigates the **migration behavior of TikTok users to Xiaohongshu** (also known as "RedBook") and analyzes their **content adaptation strategies and engagement patterns**. Using **unsupervised machine learning techniques**, we classify user adaptation strategies, identify key behavioral trends, and detect anomalies in engagement.
 
-## **Research Objectives**
-- **Understand TikTok users’ adaptation strategies** after migrating to Xiaohongshu.
-- **Classify user engagement and identity reconstruction** using **K-Means clustering** and **NMF topic modeling**.
-- **Analyze interaction behaviors** and identify key factors influencing retention.
-- **Detect anomalous users (e.g., influencers, bots, silent users)** using **DBSCAN and graph-based methods**.
-- **Provide business insights** to optimize Xiaohongshu’s content recommendation system.
+This project investigates how **TikTok users migrate to Xiaohongshu** and adapt to the new platform. The study focuses on **identity reconstruction and content adaptation strategies** using **unsupervised learning techniques**. By analyzing user behavior, text content, and engagement patterns, we explore whether these users retain their **TikTok-style content strategies** or transition towards **Xiaohongshu’s native engagement model**.
 
-## **Dataset**
-- **Source**: Crawled posts from Xiaohongshu (Jan 1, 2025 – Feb 28, 2025).
-- **Size**: **3,000 user posts**, including text content, engagement metrics, and timestamps.
-- **Features**:
-  - **Behavioral Features**: `collect_count`, `comment_count`, `share_count`, `like_count`
-  - **Text Features**: `title`, `content`
-  - **Time Features**: `create_time`, `post_hour`
-  - **Categorical Features**: `post_type`
+## **Key Research Questions**
 
-## **Project Structure**
+- How do TikTok refugees’ behavioral patterns change after migration?
+- Do they maintain their **TikTok-oriented content style**, or do they gradually adapt to Xiaohongshu?
+- What factors influence whether a user becomes **an active participant** in Xiaohongshu’s community?
+- What **themes dominate user discussions**, and how do they correlate with retention?
+- Are there **anomalies** such as **bot activity** or **hyper-engaged influencers**?
 
 ## **Methodology**
-1. **Data Cleaning & Preprocessing**  
-   - Handled missing values, standardized numeric fields, and cleaned text data.
-   - Extracted **TF-IDF features** and **time-based engagement metrics**.
 
-2. **Exploratory Data Analysis (EDA)**
-   - **Statistical analysis** of user engagement.
-   - **Keyword extraction** to identify frequent discussion topics.
+We apply **unsupervised learning models** to analyze user migration and adaptation strategies:
 
-3. **Unsupervised Learning Models**
-   - **K-Means Clustering**:
-     - Grouped users based on behavioral engagement metrics.
-     - Identified **three primary adaptation groups**: imitators, social explorers, and cultural adapters.
-   - **NMF Topic Modeling**:
-     - Extracted latent **text topics** to classify user discussions.
-   - **DBSCAN Anomaly Detection**:
-     - Identified **potential bots, influencers, and silent users**.
-   - **Graph-Based Community Analysis**:
-     - Used **Louvain algorithm** to detect **sub-communities**.
-     - Built **network visualizations** to highlight key influencers.
+### **1. Exploratory Data Analysis (EDA)**
 
-4. **Results & Key Insights**
-   - **Most TikTok users gradually adapted**, but retention rates varied by group.
-   - **Cultural adapters** engaged more deeply, while **social explorers struggled to integrate**.
-   - **Anomalous users included both hyper-engaged influencers and silent users**.
-   - **Recommendations** were made to improve user retention and engagement strategies.
+- Dataset: **3,000 user posts** collected from Xiaohongshu (Jan–Feb 2025)
+- Feature extraction:
+  - **Behavioral Features**: Collects, comments, shares, likes
+  - **Temporal Features**: Posting time and frequency
+  - **Text Features**: Keyword extraction via **TF-IDF**
+- **Visualization techniques**: Distributions, keyword frequency, correlation heatmaps
 
-## **Key Findings & Business Implications**
-✅ **Enhance Personalization**: Adjust content recommendations based on user adaptation strategies.  
-✅ **Encourage Interaction**: Increase incentives for social explorers to participate in Xiaohongshu’s ecosystem.  
-✅ **Support Influencers**: Identify and amplify the reach of cultural adapters.  
-✅ **Monitor Anomalies**: Improve bot detection mechanisms to reduce artificial engagement.  
+### **2. Unsupervised Learning Models**
 
-## **Next Steps**
-🔹 **Expand dataset**: Incorporate additional months of data for trend analysis.  
-🔹 **Predictive modeling**: Develop supervised models to predict user retention likelihood.  
-🔹 **Enhance network analysis**: Identify **influencer-driven engagement cascades** in Xiaohongshu’s ecosystem.  
-🔹 **Improve recommendation algorithms**: Design adaptive strategies to personalize user experiences based on adaptation groups.  
+- **K-Means + NMF Topic Modeling**
+  - User segmentation into **different adaptation strategies**
+  - Identification of **common content themes** among migrated users
+- **Graph Neural Networks (GNN) + DBSCAN**
+  - **Community detection** to identify tightly-knit engagement groups
+  - **Anomaly detection** to detect bot-like behavior and outliers
+
+### **3. Results & Business Implications**
+
+- **User segmentation analysis**: Understanding different migration strategies
+- **Network graph analysis**: Detecting core communities & peripheral users
+- **Adaptation strategies**: Implications for Xiaohongshu’s **content recommendation system**
+- **Identifying high-potential cross-platform creators** for targeted platform support
+
+## **Repository Structure**
+
+```
+├── data/                      # Dataset (processed and raw data)
+├── notebooks/                 # Jupyter Notebooks with EDA & modeling
+├── src/                       # Python scripts for preprocessing & modeling
+├── results/                   # Model outputs and analysis results
+├── report/                    # Final PDF report
+├── README.md                  # Project overview
+├── requirements.txt           # Python dependencies
+```
+
+## **Installation & Usage**
+
+To reproduce the results, clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/yourusername/tiktok-refugee-analysis.git
+cd tiktok-refugee-analysis
+pip install -r requirements.txt
+```
+
+Run the Jupyter notebooks for **data processing, modeling, and visualization**:
+
+```bash
+jupyter notebook notebooks/
+```
+
+## **Key Findings**
+
+- **Most TikTok refugees gradually adapt** to Xiaohongshu but retain **some TikTok-style behaviors**.
+- **Community engagement is a strong predictor** of user retention.
+- **Cultural adapters (cross-platform users)** exhibit the highest long-term engagement.
+- **Graph-based anomaly detection** reveals possible **bot-like or fraudulent activity**.
+
+## **Future Work**
+
+- **Expand the study** to analyze **longer-term adaptation trends**.
+- **Enhance graph-based community detection** to refine engagement patterns.
+- **Develop predictive models** for user retention.
+
+For any inquiries, please contact jiwu3340\@Colorado.edu.
+
+## **License**
+
+This project is licensed under the CC **BY-NC 4.0  License**.\
+
 
 ---
 
-## **How to Run the Project**
-### **Setup**
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/tiktok-refugee-adaptation.git
-   cd tiktok-refugee-adaptation
+This README provides a **comprehensive overview** of your project, making it easy for others to **understand, install, and use** your code. Let me know if you need any modifications! 🚀
 
